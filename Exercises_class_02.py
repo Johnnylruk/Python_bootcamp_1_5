@@ -56,12 +56,3 @@
 # except ValueError:
 #   print("Please input a number.")
 
-input_numbers = input("Please, select few number with comma between the selection 'E.g. 2,3,5,6,7'")
-
-numbers_to_list = input_numbers.split(",")
-
-string_to_int = list(map(int, numbers_to_list))
-print(string_to_int)
-
-
-#list_of_numbers = 
