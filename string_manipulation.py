@@ -179,6 +179,3 @@
 #     reversed_string += data[char]
 # print(reversed_string)
 
-data = 'myprogram.exe'
-data_join = ' totaly '.join(data).split()
-print(data_join)
