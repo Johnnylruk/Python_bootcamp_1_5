@@ -22,23 +22,40 @@
 # print(f'The Highest number is: {highest_number} at position {pos_high} and the lowest number is: {lowest_number} at position {pos_low}')
 
 
-list_of_numbers = []
-answer = 'Yes'.upper()
+# list_of_numbers = []
+# answer = 'Yes'.upper()
 
-while answer == 'Yes'.upper():
-  number = int(input("Type a number: "))
-  if number in list_of_numbers:
-    list_of_numbers.remove(number)
-    list_of_numbers.append(number)
-    print("Duplicated value, I will not add. ")
-  else:
+# while answer == 'Yes'.upper():
+#   number = int(input("Type a number: "))
+#   if number in list_of_numbers:
+#     list_of_numbers.remove(number)
+#     list_of_numbers.append(number)
+#     print("Duplicated value, I will not add. ")
+#   else:
+#       list_of_numbers.append(number)
+#   list_of_numbers.sort()
+#   question = str(input("Do you want to continue? Yes or No? ")).upper()
+#   while question != 'Yes'.upper() and question != 'No'.upper():
+#      question = str(input("Do you want to continue? Yes or No? ")).upper()
+#   if question == "No".upper():
+#     answer = question
+# print(list_of_numbers)
+
+
+list_of_numbers = []
+number_position = 0
+
+for num in range(1,6):
+  number = int(input("Please, type a number: "))
+  if num == 1 or number > list_of_numbers[len(list_of_numbers) - 1]:
       list_of_numbers.append(number)
-  list_of_numbers.sort()
-  question = str(input("Do you want to continue? Yes or No? ")).upper()
-  while question != 'Yes'.upper() and question != 'No'.upper():
-     question = str(input("Do you want to continue? Yes or No? ")).upper()
-  if question == "No".upper():
-    answer = question
+      print("Number added at the end of the list.")
+  else:
+     while number_position < len(list_of_numbers):
+        if number <= list_of_numbers[number_position]:
+           list_of_numbers.insert(number_position,number)
+           break
+        number_position += 1
 print(list_of_numbers)
 
 
