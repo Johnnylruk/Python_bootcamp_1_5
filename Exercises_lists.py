@@ -42,20 +42,63 @@
 # print(list_of_numbers)
 
 
-list_of_numbers = []
-number_position = 0
+# list_of_numbers = []
+# number_position = 0
 
-for num in range(1,6):
+# for num in range(1,6):
+#   number = int(input("Please, type a number: "))
+#   if num == 1 or number > list_of_numbers[len(list_of_numbers) - 1]:
+#       list_of_numbers.append(number)
+#       print("Number added at the end of the list.")
+#   else:
+#      while number_position < len(list_of_numbers):
+#         if number <= list_of_numbers[number_position]:
+#            list_of_numbers.insert(number_position,number)
+#            break
+#         number_position += 1
+# print(list_of_numbers)
+
+
+# list_of_numbers = list()
+# count = 0
+# five_position = 0
+
+# while True:
+#   number = int(input("Please type a number "))
+#   list_of_numbers.append(number)
+#   count += 1
+#   answer = input("Do you wish to continue? Y/N ").upper()
+#   if answer == 'N':
+#     print(f"You have typed {count} numbers.")
+#     list_of_numbers.sort(reverse=True)
+#     print(f"This is your list of numbers in decrescent order {list_of_numbers}")
+#     if 5 not in list_of_numbers:
+#       print("You do not have number 5 in your list.")
+#     for pos, num in enumerate(list_of_numbers):
+#       if num == 5:
+#         five_position = pos 
+#         print(f"You have number 5 as position {pos} of your list.")
+#     break
+  
+
+
+list_of_numbers = list()
+list_of_even_numbers = list()
+list_of_odd_numbers = list()
+
+while True:
   number = int(input("Please, type a number: "))
-  if num == 1 or number > list_of_numbers[len(list_of_numbers) - 1]:
-      list_of_numbers.append(number)
-      print("Number added at the end of the list.")
+  list_of_numbers.append(number)
+  if number % 2 == 0:
+    list_of_even_numbers.append(number)
   else:
-     while number_position < len(list_of_numbers):
-        if number <= list_of_numbers[number_position]:
-           list_of_numbers.insert(number_position,number)
-           break
-        number_position += 1
-print(list_of_numbers)
-
-
+    list_of_odd_numbers.append(number)
+  answer = input("Do you wish to continue?... Y/N ").upper()
+  if answer == 'N':
+    list_of_even_numbers.sort()
+    list_of_numbers.sort()
+    list_of_odd_numbers.sort()
+    print(f"Your numbers list is {list_of_numbers}")
+    print(f"Your odd numbers are {list_of_odd_numbers}")
+    print(f"Your even numbers are {list_of_even_numbers}")
+    break
