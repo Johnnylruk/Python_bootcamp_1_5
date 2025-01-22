@@ -82,23 +82,40 @@
   
 
 
-list_of_numbers = list()
-list_of_even_numbers = list()
-list_of_odd_numbers = list()
+# list_of_numbers = list()
+# list_of_even_numbers = list()
+# list_of_odd_numbers = list()
 
-while True:
-  number = int(input("Please, type a number: "))
-  list_of_numbers.append(number)
-  if number % 2 == 0:
-    list_of_even_numbers.append(number)
-  else:
-    list_of_odd_numbers.append(number)
-  answer = input("Do you wish to continue?... Y/N ").upper()
-  if answer == 'N':
-    list_of_even_numbers.sort()
-    list_of_numbers.sort()
-    list_of_odd_numbers.sort()
-    print(f"Your numbers list is {list_of_numbers}")
-    print(f"Your odd numbers are {list_of_odd_numbers}")
-    print(f"Your even numbers are {list_of_even_numbers}")
-    break
+# while True:
+#   number = int(input("Please, type a number: "))
+#   list_of_numbers.append(number)
+#   if number % 2 == 0:
+#     list_of_even_numbers.append(number)
+#   else:
+#     list_of_odd_numbers.append(number)
+#   answer = input("Do you wish to continue?... Y/N ").upper()
+#   if answer == 'N':
+#     list_of_even_numbers.sort()
+#     list_of_numbers.sort()
+#     list_of_odd_numbers.sort()
+#     print(f"Your numbers list is {list_of_numbers}")
+#     print(f"Your odd numbers are {list_of_odd_numbers}")
+#     print(f"Your even numbers are {list_of_even_numbers}")
+#     break
+
+lb_count = 0
+rb_count = 0
+expression = list(input("Gimme math expression "))
+
+for ch in expression:
+    if ch == "(":
+        left_brackets = ch
+        lb_count += 1
+    elif ch == ")":
+        right_brackets = ch
+        rb_count += 1
+
+if rb_count == lb_count:
+    print("Valid Expression")
+else:
+    print("Not Valid Expression")
