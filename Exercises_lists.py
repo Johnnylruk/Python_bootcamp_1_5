@@ -60,16 +60,14 @@
 
 
 # list_of_numbers = list()
-# count = 0
 # five_position = 0
 
 # while True:
 #   number = int(input("Please type a number "))
 #   list_of_numbers.append(number)
-#   count += 1
 #   answer = input("Do you wish to continue? Y/N ").upper()
 #   if answer == 'N':
-#     print(f"You have typed {count} numbers.")
+#     print(f"You have typed {len(list_of_numbers)} numbers.")
 #     list_of_numbers.sort(reverse=True)
 #     print(f"This is your list of numbers in decrescent order {list_of_numbers}")
 #     if 5 not in list_of_numbers:
@@ -103,19 +101,124 @@
 #     print(f"Your even numbers are {list_of_even_numbers}")
 #     break
 
-lb_count = 0
-rb_count = 0
-expression = list(input("Gimme math expression "))
+# lb_count = 0
+# rb_count = 0
+# expression = list(input("Gimme math expression "))
 
-for ch in expression:
-    if ch == "(":
-        left_brackets = ch
-        lb_count += 1
-    elif ch == ")":
-        right_brackets = ch
-        rb_count += 1
+# for ch in expression:
+#     if ch == "(":
+#         left_brackets = ch
+#         lb_count += 1
+#     elif ch == ")":
+#         right_brackets = ch
+#         rb_count += 1
 
-if rb_count == lb_count:
-    print("Valid Expression")
-else:
-    print("Not Valid Expression")
+# if rb_count == lb_count:
+#     print("Valid Expression")
+# else:
+#     print("Not Valid Expression")
+
+# people = list()
+# data = list()
+
+# for d in range(3):
+#     data.append(str(input("Name: ")))
+#     data.append(int(input("Age: ")))
+#     people.append(data[:])
+#     data.clear()
+
+# for person in people:
+#     if person[1] > 18:
+#         print(person[0])
+
+# people = list()
+# data = list()
+# lower_weight = 0
+# higher_weight = 0
+# who_higher, who_lower = '',''
+# while True:
+#     data.append(str(input("Name: ")))
+#     data.append(float(input("Weight: ")))
+#     people.append(data[:])
+#     data.clear()
+#     answer = str(input("Do you like to continue? Y/N "))
+#     if answer in 'Nn':
+#       print(f"You have registered {len(people)} people.")
+#       for pos, weight in enumerate(people):
+#           if pos == 0:
+#              lower_weight = weight[1]
+#              higher_weight = weight[1]
+#           else:
+#             if weight[1] > higher_weight:
+#                 higher_weight = weight[1]
+#                 who_higher = weight[0]
+#             elif weight[1] < lower_weight:
+#                lower_weight = weight[1]
+#                who_lower += weight[0]
+#       print(f"The highest weight is: {higher_weight} that belongs to {who_higher}")
+#       print(f"The lowest weight is: {lower_weight} that belongs to {who_lower}")
+#       break
+
+# list_of_numbers = [[],[]]
+# print(list_of_numbers)
+# for num in range(7):
+#     number = int(input("Type a number: "))
+#     if number % 2 == 0:
+#         list_of_numbers[1].append(number)
+#     else:
+#         list_of_numbers[0].append(number)
+# list_of_numbers.sort()
+# print(f"The odd numbers typed is/are: {list_of_numbers[0]}")
+# print(f"The even numbers typed is/are: {list_of_numbers[1]}")
+
+# matrix = []
+# data = []
+# sum_even = 0
+# highest_sec_col_value = 0
+# for n in range(0,3):
+#     number = int(input(f"Type number for [0:{n}]: "))
+#     if number % 2 == 0:
+#       sum_even += number
+#     data.append(number)
+# matrix.append(data[:])
+# data.clear()
+# for n in range(0,3):
+#     number = int(input(f"Type number for [1:{n}]: "))
+#     if number % 2 == 0:
+#       sum_even += number
+#     if n == 0:
+#        highest_sec_col_value = number
+#     elif highest_sec_col_value < number:
+#        highest_sec_col_value = number
+#     data.append(number)
+# matrix.append(data[:])
+# data.clear()
+# for n in range(0,3):
+#     number = int(input(f"Type number for [2:{n}]: "))
+#     if number % 2 == 0:
+#       sum_even += number
+#     data.append(number)
+# matrix.append(data[:])
+# data.clear()
+# third_col_sum = matrix[0][2] + matrix[1][2] + matrix[2][2]
+
+# print(f"[ {matrix[0][0]} ][ {matrix[0][1]} ][ {matrix[0][2]} ]")
+# print(f"[ {matrix[1][0]} ][ {matrix[1][1]} ][ {matrix[1][2]} ]")
+# print(f"[ {matrix[2][0]} ][ {matrix[2][1]} ][ {matrix[2][2]} ]")
+# print(f"The sum of even numbers is: {sum_even}")
+# print(f"The sum of third column is: {third_col_sum}")
+# print(f"The highest second column value is: {highest_sec_col_value}")
+
+import random as rd
+
+loterry_numbers = []
+list_of_numbers = []
+for num in range(60):
+    loterry_numbers.append(num)
+answer = int(input("How many games you want to generate? "))
+
+for num in range(answer * 6):
+    random = rd.choice(loterry_numbers)
+    list_of_numbers.append(random)
+print(list_of_numbers)
+    
