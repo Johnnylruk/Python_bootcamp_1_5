@@ -209,16 +209,27 @@
 # print(f"The sum of third column is: {third_col_sum}")
 # print(f"The highest second column value is: {highest_sec_col_value}")
 
+
 import random as rd
+import time
 
 loterry_numbers = []
 list_of_numbers = []
-for num in range(60):
+game_data = []
+for num in range(1, 61):
     loterry_numbers.append(num)
 answer = int(input("How many games you want to generate? "))
-
-for num in range(answer * 6):
-    random = rd.choice(loterry_numbers)
-    list_of_numbers.append(random)
-print(list_of_numbers)
-    
+n = 0;
+while n < answer:
+  for num in range(6):
+    while len(list_of_numbers) < 6:
+      random = rd.choice(loterry_numbers)
+      if random not in list_of_numbers:
+        list_of_numbers.append(random)
+    game_data.append(list_of_numbers[:])
+    list_of_numbers.clear()
+    n += 1
+    break
+for p,v in enumerate(game_data):
+  print(f"Game {p + 1}: {v}")
+  time.sleep(1)
