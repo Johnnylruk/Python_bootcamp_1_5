@@ -210,26 +210,54 @@
 # print(f"The highest second column value is: {highest_sec_col_value}")
 
 
-import random as rd
-import time
+# import random as rd
+# import time
 
-loterry_numbers = []
-list_of_numbers = []
-game_data = []
-for num in range(1, 61):
-    loterry_numbers.append(num)
-answer = int(input("How many games you want to generate? "))
-n = 0;
-while n < answer:
-  for num in range(6):
-    while len(list_of_numbers) < 6:
-      random = rd.choice(loterry_numbers)
-      if random not in list_of_numbers:
-        list_of_numbers.append(random)
-    game_data.append(list_of_numbers[:])
-    list_of_numbers.clear()
-    n += 1
+# loterry_numbers = []
+# list_of_numbers = []
+# game_data = []
+# for num in range(1, 61):
+#     loterry_numbers.append(num)
+# answer = int(input("How many games you want to generate? "))
+# n = 0;
+# while n < answer:
+#   for num in range(6):
+#     while len(list_of_numbers) < 6:
+#       random = rd.choice(loterry_numbers)
+#       if random not in list_of_numbers:
+#         list_of_numbers.append(random)
+#     list_of_numbers.sort()
+#     game_data.append(list_of_numbers[:])
+#     list_of_numbers.clear()
+#     n += 1
+#     break
+# for p,v in enumerate(game_data):
+#   print(f"Game {p + 1}: {v}")
+#   time.sleep(1)
+
+marks = []
+grades = []
+display_grades = []
+while True:
+  name = str(input("Name: ")).strip()
+  mark_one = float(input("Mark 1: "))
+  mark_two = float(input("Mark 2: "))
+  marks.append(name)
+  marks.append(mark_one)
+  marks.append(mark_two)
+  mean = (mark_one + mark_two) / 2
+  marks.append(mean)
+  grades.append(marks[:])
+  marks.clear()
+  answer = str(input("Do you wish to continue? Y/N "))
+  if answer in "Nn":
+    for pos, val in enumerate(grades):
+      if pos == 0:
+        print(f"No.  Name    Mean")
+      print(f"{pos}   {val[0]}   {val[3]}")
+      display_grades.append(val)
+    display = int(input("What student's grade you want to see? 999 for stop program: "))
+    while display != 999:
+          print(f"{display_grades[display][0]}'s grades are ({display_grades[display][1]},{display_grades[display][2]}) and mean is: {display_grades[display][3]}")          
+          display = int(input("What student's grade you want to see? 999 for stop program: "))
     break
-for p,v in enumerate(game_data):
-  print(f"Game {p + 1}: {v}")
-  time.sleep(1)
