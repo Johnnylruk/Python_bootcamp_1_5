@@ -209,6 +209,18 @@
 # print(f"The sum of third column is: {third_col_sum}")
 # print(f"The highest second column value is: {highest_sec_col_value}")
 
+# # Better Resolution for Matrix above 
+# matrix = [[0,0,0], [0,0,0,],[0,0,0]]
+# for line in range(3):
+#    for column in range(3):
+#       matrix[line][column] = int(input(f"Type a number {line},{column}"))
+# print('-=' * 30)
+# for line in range(3):
+#   for column in range(3):
+#     print(f'[{matrix[line][column]:^5}]', end='')
+#   print()
+
+
 
 # import random as rd
 # import time
@@ -235,29 +247,29 @@
 #   print(f"Game {p + 1}: {v}")
 #   time.sleep(1)
 
-marks = []
-grades = []
-display_grades = []
-while True:
-  name = str(input("Name: ")).strip()
-  mark_one = float(input("Mark 1: "))
-  mark_two = float(input("Mark 2: "))
-  marks.append(name)
-  marks.append(mark_one)
-  marks.append(mark_two)
-  mean = (mark_one + mark_two) / 2
-  marks.append(mean)
-  grades.append(marks[:])
-  marks.clear()
-  answer = str(input("Do you wish to continue? Y/N "))
-  if answer in "Nn":
-    for pos, val in enumerate(grades):
-      if pos == 0:
-        print(f"No.  Name    Mean")
-      print(f"{pos}   {val[0]}   {val[3]}")
-      display_grades.append(val)
-    display = int(input("What student's grade you want to see? 999 for stop program: "))
-    while display != 999:
-          print(f"{display_grades[display][0]}'s grades are ({display_grades[display][1]},{display_grades[display][2]}) and mean is: {display_grades[display][3]}")          
-          display = int(input("What student's grade you want to see? 999 for stop program: "))
-    break
+# marks = []
+# grades = []
+# display_grades = []
+# while True:
+#   name = str(input("Name: ")).strip()
+#   mark_one = float(input("Mark 1: "))
+#   mark_two = float(input("Mark 2: "))
+#   marks.append(name)
+#   marks.append(mark_one)
+#   marks.append(mark_two)
+#   mean = (mark_one + mark_two) / 2
+#   marks.append(mean)
+#   grades.append(marks[:])
+#   marks.clear()
+#   answer = str(input("Do you wish to continue? Y/N "))
+#   if answer in "Nn":
+#     for pos, val in enumerate(grades):
+#       if pos == 0:
+#         print(f"No.  Name    Mean")
+#       print(f"{pos}   {val[0]}   {val[3]}")
+#       display_grades.append(val)
+#     display = int(input("What student's grade you want to see? 999 for stop program: "))
+#     while display != 999:
+#           print(f"{display_grades[display][0]}'s grades are ({display_grades[display][1]} | {display_grades[display][2]}) and mean is: {display_grades[display][3]}")          
+#           display = int(input("What student's grade you want to see? 999 for stop program: "))
+#     break
