@@ -4,8 +4,8 @@
 # pos_high = 0
 # pos_low = 0
 
-# for num in range(0, 5):
-#   list_of_numbers.append(int(input("Type a number: ")))
+# for num in range(5):
+#   list_of_numbers = [int(input(f"Type a number: {num} ")) for num in range(5)]
 #   for pos , number in enumerate(list_of_numbers):
 #     if highest_number == 0:
 #       highest_number = number
@@ -122,10 +122,10 @@
 # data = list()
 
 # for d in range(3):
-#     data.append(str(input("Name: ")))
-#     data.append(int(input("Age: ")))
-#     people.append(data[:])
-#     data.clear()
+#   data.append(str(input("Name: ")))
+#   data.append(int(input("Age: ")))
+#   people.append(data[:])
+#   data.clear()
 
 # for person in people:
 #     if person[1] > 18:
@@ -273,3 +273,4 @@
 #           print(f"{display_grades[display][0]}'s grades are ({display_grades[display][1]} | {display_grades[display][2]}) and mean is: {display_grades[display][3]}")          
 #           display = int(input("What student's grade you want to see? 999 for stop program: "))
 #     break
+
