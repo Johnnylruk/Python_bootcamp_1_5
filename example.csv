@@ -1,0 +1,3 @@
+name, quantity, price, stock
+Johnny, 38, 88.30, True
+amanda, 22, 40.50, False

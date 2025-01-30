@@ -160,14 +160,15 @@
 # print(f'Values: {values}')
 
 
-def counting_freq(char):
-  count_freq = {}
+# def counting_freq(char):
+#   count_freq = {}
 
-  for c in char:
-    if c in count_freq:
-      count_freq[c] += 1
-    else:
-      count_freq[c] = 1
-  return count_freq
+#   for c in char:
+#     if c in count_freq:
+#       count_freq[c] += 1
+#     else:
+#       count_freq[c] = 1
+#   return count_freq
 
-print(counting_freq("Data Engineer"))
+# print(counting_freq("Data Engineer"))
+
